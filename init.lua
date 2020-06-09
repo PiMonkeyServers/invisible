@@ -65,7 +65,7 @@ minetest.register_globalstep(function(dtime)
 	for _, player in pairs(minetest.get_connected_players()) do
 		local name=player:get_player_name()
 		local sneak=player:get_player_control().sneak
-		if (sneak and not invisible[name]) or (sneak==false and invisible[name] and not invisible[name].tool) then
+		if (sneak==false and invisible[name] and not invisible[name].tool) then
 			invisible.toggle(player)
 		end
 	end
