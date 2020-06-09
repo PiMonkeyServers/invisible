@@ -41,15 +41,6 @@ invisible.toggle=function(user,sneak)
 
 			minetest.chat_send_player(name, "invisible off")
 		end
-	else
-	
-		if not invisible[name] then
-			invisible[name]={}
-			user:set_nametag_attributes({color = {a = 0, r = 255, g = 255, b = 255}})
-		else
-			user:set_nametag_attributes({color = {a = 255, r = 255, g = 255, b = 255}})
-			invisible[name]=nil
-		end
 	end
 end
 
